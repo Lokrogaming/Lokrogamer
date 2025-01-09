@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta name="google" content="notranslate">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-70a6755c-e447-44a1-9b0b-ec3f4607f45b" data-elfsight-app-lazy></div>
+    <title>MENU P1</title>
+    <style>
+         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, red, royalblue);
+        }
+        .button {
+            background: linear-gradient(to right, black, red);
+            border: 2px solid #1DB954;
+            border-radius: 12px;
+            color: #A0A0A0;
+            font-size: 18px;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .button:hover {
+            background: linear-gradient(to right, black, green);
+        }
+        .chatgpt-logo {
+            background: linear-gradient(to right, rgba(0, 100, 255, 1), rgba(0, 255, 100, 1), rgba(255, 0, 255, 1));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-c5989b4a-7cda-40d6-995f-913fbe0d858b" data-elfsight-app-lazy></div>
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-f4f24dab-4d63-4c28-8328-ecb4b1a6b91e" data-elfsight-app-lazy></div>
+
+    <button class="button" onclick="openSpotifyPlayer()">
+        SPOTIFY PLAYER
+    </button>
+     
+     <button class="button" onclick="openAbout()" style="color:RED">
+        <strong>ABOUT US</strong>
+    </button>
+    
+    <button class="button" onclick="openChatGptApi()">
+        <span class="chatgpt-logo">🤖 LokRoBot (German only)</span>
+    </button>
+    
+    <button type="button" class="button" onclick="opentool()">
+    SERVER TOOL (<strong>PASSWORD REQUIRED!</strong>)
+    </button>
+
+    <button class="button" onclick="openwidgetsnewwindow()" right="10px" top="10px">
+        NEXT PAGE: WIDGETS
+    </button>
+
+    <script>
+        function openSpotifyPlayer() {
+            window.location.href = 'spotify-player.html';
+        }
+
+        function openChatGptApi() {
+            window.location.href = 'chatgpt-api.html';
+        }
+        
+        function openAbout() {
+            window.location.href = 'about.html';
+        }
+        
+        function opentool() {
+            window.location.href = "tool-uebergang.html";
+        }
+        
+         function openwidgetsnewwindow() {
+            window.location.href="https://52dahi.mimo.run/index.html", "_blank";
+        }
+    </script>
+</body>
+</html>
