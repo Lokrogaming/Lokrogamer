@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta name="google" content="notranslate">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-70a6755c-e447-44a1-9b0b-ec3f4607f45b" data-elfsight-app-lazy></div>
+<link rel="icon" type="image/x-icon" href="https://c.web.de/@1454440398230394054/q2zlOOItS1elygEhy4Ol6Q">
+    <title>Sign IN</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, red, royalblue);
+            font-family: Arial, sans-serif;
+        }
+        .signin-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 80%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            width: 80%;
+            background: linear-gradient(to right, black, red);
+            border: 2px solid #1DB954;
+            border-radius: 12px;
+            color: #A0A0A0;
+            font-size: 18px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: linear-gradient(to right, black, green);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signin-container" id="signin">
+        <h2>Sign In</h2>
+        <input id="username" type="text" placeholder="Username" />
+        <input id="password" type="password" placeholder="Password" />
+        <p id="captchaQuestion"></p>
+        <input id="captchaAnswer" type="text" placeholder="Antwort" />
+        <button onclick="signIn()">Sign In</button>
+        <p id="message" style="color: red; font-size: 14px;"></p>
+    </div>
+
+    <script>
+        let captchaResult;
+
+        function generateCaptcha() {
+            const num1 = Math.floor(Math.random() * 10);
+            const num2 = Math.floor(Math.random() * 10);
+            captchaResult = num1 + num2;
+            document.getElementById("captchaQuestion").textContent = `Was ist ${num1} + ${num2}?`;
+        }
+
+        function signIn() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const captchaAnswer = parseInt(document.getElementById("captchaAnswer").value, 10);
+
+            if (captchaAnswer !== captchaResult) {
+                document.getElementById("message").textContent = "Ungültige CAPTCHA-Antwort.";
+                return;
+            }
+
+            if (username === "User" && password === "password123") {
+                // Redirect to zwischenstation.html on successful login
+                window.location.href = "nochimumbau.html" ; 
+            } else {
+                document.getElementById("message").textContent = "Ungültiger Benutzername oder Passwort.";
+            }
+        }
+
+        // Reset input fields and generate CAPTCHA on page load
+        window.onload = function() {
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+            document.getElementById("captchaAnswer").value = "";
+            document.getElementById("message").textContent = "";
+            generateCaptcha();
+            document.title = "Sign IN";
+        }
+    </script>
+</body>
+</html>
