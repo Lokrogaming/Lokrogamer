@@ -3,71 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discord Dad Jokes Bot</title>
+  <title>Startseitet</title>
 </head>
 <body>
-  <h1>Discord Dad Jokes Bot</h1>
-  <p>Diese Seite sendet jede Stunde einen zufälligen Dad-Witz an deinen Discord-Webhook.</p>
-  <button id="startBot">Bot starten</button>
-  <button id="stopBot">Bot stoppen</button>
-
-  <script>
-    // Dein Webhook-Link hier einfügen
-    const webhookUrl = "https://discord.com/api/webhooks/1327726613059866726/ciiApDxdXoYurK2XeGfJGvEB8Yr8DAnA-yd8lB2LqM8rV6m8h3rmt679KX_8h2GqWnZc";
-
-    // Liste mit Dad-Witzen
-    const dadJokes = [
-      { content: "Warum können Geister keine Lügen erzählen? Weil man direkt durch sie hindurchsieht!" },
-      { content: "Wie nennt man einen Bumerang, der nicht zurückkommt? Ein Stock!" },
-      { content: "Warum haben Skelette keinen Humor? Weil sie alles tot ernst nehmen!" },
-      { content: "Ich habe versucht, ein Buch über Schwerkraft zu schreiben, aber ich konnte es einfach nicht ablegen." },
-      { content: "Warum können Enten so gut Witze erzählen? Weil sie immer *quak*komisch sind!" },
-      { content: "Ich habe mich heute am Herd verbrannt... Ich glaube, ich habe ein heißes Date mit dem Ofen." },
-      { content: "Wie nennt man eine Gruppe singender Dinosaurier? Ein Tyrannochor-us!" }
-    ];
-
-    let intervalId = null;
-
-    // Funktion zum Senden einer zufälligen Nachricht
-    async function sendRandomJoke() {
-      // Wähle einen zufälligen Witz
-      const joke = dadJokes[Math.floor(Math.random() * dadJokes.length)];
-
-      try {
-        const response = await fetch(webhookUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(joke),
-        });
-
-        if (response.ok) {
-          console.log("Dad-Witz gesendet:", joke.content);
-        } else {
-          console.error("Fehler beim Senden:", await response.text());
-        }
-      } catch (error) {
-        console.error("Fehler:", error);
-      }
-    }
-
-    // Bot starten
-    document.getElementById("startBot").addEventListener("click", () => {
-      if (!intervalId) {
-        sendRandomJoke(); // Sende sofort einen Witz
-        intervalId = setInterval(sendRandomJoke, 60 * 60 * 1000); // Jede Stunde
-        console.log("Bot gestartet!");
-      }
-    });
-
-    // Bot stoppen
-    document.getElementById("stopBot").addEventListener("click", () => {
-      if (intervalId) {
-        clearInterval(intervalId);
-        intervalId = null;
-        console.log("Bot gestoppt!");
-      }
-    });
-  </script>
+  <h1>Startseite</h1>
+  
 </body>
 </html>
 
