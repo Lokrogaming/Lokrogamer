@@ -1,0 +1,157 @@
+body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, red, black);
+        }
+        .signin-container {    
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .signin-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .signin-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50; /* Grüner Hintergrund */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .signin-container button:hover {
+            background-color: #45a049; /* Dunklerer Grüner Hintergrund beim Hover */
+        }
+        #console {
+            background-color: #1c1c1c; /* Dunkler Hintergrund für die Konsole */
+            color: #fff; /* Weiße Schrift */
+            width: 90%; /* Breite der Konsole */
+            height: 150px; /* Höhe der Konsole */
+            margin-top: 20px; /* Abstand oben */
+            padding: 10px; /* Innenabstand */
+            overflow-y: auto; /* Scrollen bei Überlauf */
+            border-radius: 8px; /* Abgerundete Ecken */
+            font-family: monospace; /* Monospace-Schrift für die Konsole */
+        }
+        #captcha {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+        body {
+            font-family=: Arial, sans-serif;
+            background: linear-gradient(to right, red, black);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .episodes {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .episode {
+            min-width: max-content;
+            margin-bottom: .8rem;
+            padding: .8rem 1rem;
+            border-radius: 10px;
+            border: 0;
+            background: #191414;
+            color: #fff;
+            cursor: pointer;
+            text-align: left;
+        }
+        .episode:hover {
+            background: #1Db954;
+        }
+         .button {
+            background-color: transparent;
+            border: 2px solid #1DB954; /* Spotify Grün */
+            border-radius: 12px; /* Abgerundete Ecken */
+            color: #A0A0A0; /* Graue Schriftfarbe für "SPOTIFY PLAYER" */
+            font-size: 18px;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .button:hover {
+            background-color: rgba(29, 185, 84, 0.1); /* Leichte grüne Hintergrundfarbe beim Hover */
+        }
+    .button-next {
+            position: absolute;
+    top: center;
+    right: 20px;
+    background: linear-gradient(to right, black, red);
+    border: 2px solid #1DB954;
+    border-radius: 12px;
+    color: #A0A0A0;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    }
+            
+        iframe {
+            width: 100%;
+            height: 380px;
+            margin-bottom: 10px;
+        }
+        /* General styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, red, royalblue);
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 80%;
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* Adjustments for smaller devices */
+@media (max-width: 480px) {
+    .button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
