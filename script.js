@@ -7,3 +7,6 @@ function opentime() {
 function Backtomenu() {
   window.location.href ="index.html"
 }
+function openlibrary() {
+  window.location.href="game-library.html"
+}
