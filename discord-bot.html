@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord Dad Jokes Bot</title>
+</head>
+<body>
+  <h1>Discord Webhook Bot</h1>
+  <p>Diese Seite sendet jede Viertelstunde einen zufälligen Dad-Witz an deinen Discord-Webhook.</p>
+  <button id="startBot">Bot starten</button>
+  <button id="stopBot">Bot stoppen</button>
+
+  <script>
+    const webhookUrl = "https://discord.com/api/webhooks/1328019742245785621/lJIGqaTUwIhjDjUrylyjnU_S4Gw-SU0aakSw-9kxFEsjBv_lpBMUiTn_ck-roN3sUN-9";
+
+    const dadJokes = [
+      { content: "Test erfolgreich! :D" },
+      { content: "Wer das liest ist doof! :P" },
+      { content: "Zufällige Nachrichten sind MEIN Ding! :O" },
+      { content: "Lästern über AquaBuild ist 11. Gebot von Gott in der Bibel :)" },
+      { content: "Warum bist du nicht arbeiten mit /economy work? Das geht gar nicht!" },
+    
+    ];
+
+    let intervalId = null;
+
+    // Funktion zum Senden einer zufälligen Nachricht
+    async function sendRandomJoke() {
+      const joke = dadJokes[Math.floor(Math.random() * dadJokes.length)];
+      const timestamp = new Date().toLocaleTimeString(); // Zeitstempel
+
+      try {
+        const response = await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(joke),
+        });
+
+        if (response.ok) {
+          logToConsole(`(${timestamp}) Dad-Witz gesendet: "${joke.content}"`);
+        } else {
+          console.error("Fehler beim Senden:", await response.text());
+        }
+      } catch (error) {
+        console.error("Fehler:", error);
+      }
+    }
+
+    // Bot starten
+    document.getElementById("startBot").addEventListener("click", () => {
+      if (!intervalId) {
+        sendRandomJoke(); // Sende sofort einen Witz
+        intervalId = setInterval(sendRandomJoke, 15 * 60 * 1000); // Jede Viertelstunde
+        logToConsole("Bot gestartet!");
+      }
+    });
+
+    // Bot stoppen
+    document.getElementById("stopBot").addEventListener("click", () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null;
+        logToConsole("Bot gestoppt!");
+      }
+    });
+
+    // Funktion zum Protokollieren in der Konsole
+    function logToConsole(message) {
+      const consoleDiv = document.getElementById('console');
+      consoleDiv.innerHTML += `<div>> ${message}</div>`;
+    }
+  </script>
+
+  <div id="console" style="border: 1px solid #ccc; padding: 10px; margin-top: 20px; max-height: 300px; overflow-y: auto;">
+    <strong>Konsole:</strong>
+  </div>
+
+</body>
+</html>
