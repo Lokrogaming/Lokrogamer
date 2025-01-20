@@ -10,3 +10,6 @@ function Backtomenu() {
 function openlibrary() {
   window.location.href="game-library.html"
 }
+function openbot() {
+  window.location.href="discord-bot.html"
+}
