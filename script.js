@@ -1,5 +1,5 @@
 function opengame() {
-  window.location.href ="guesser.html"
+  window.location.href ="guesser2.html"
 }
 function opentime() {
   window.location.href ="time2.html"
