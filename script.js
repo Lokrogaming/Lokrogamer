@@ -2,7 +2,7 @@ function opengame() {
   window.location.href ="guesser2.html"
 }
 function opentime() {
-  window.location.href ="time2.html"
+  window.location.href ="time3.html"
 }
 function Backtomenu() {
   window.location.href ="game-library.html"
