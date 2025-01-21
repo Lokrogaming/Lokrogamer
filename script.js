@@ -19,3 +19,5 @@ function opendownloader() {
 function downloadtimer() {
   window.location.href="time.zip"
 }
+function downloadLogo() {
+  window.location.href=""
