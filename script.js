@@ -22,3 +22,6 @@ function downloadtimer() {
 function downloadLogo() {
   window.location.href="logo.zip"
 }
+function downloadbewerbung() {
+  window.location.href="Bewerbung-Content_creator.zip"
+}
