@@ -16,3 +16,6 @@ function openbot() {
 function opendownloader() {
   window.location.href="download-hub.html"
 }
+function downloadtimer() {
+  window.location.href="time.zip"
+}
