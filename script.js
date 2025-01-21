@@ -20,4 +20,5 @@ function downloadtimer() {
   window.location.href="time.zip"
 }
 function downloadLogo() {
-  window.location.href=""
+  window.location.href="logo.zip"
+}
