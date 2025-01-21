@@ -13,3 +13,6 @@ function openlibrary() {
 function openbot() {
   window.location.href="discord-bot.html"
 }
+function opendownloader() {
+  window.location.href="download-hub.html"
+}
