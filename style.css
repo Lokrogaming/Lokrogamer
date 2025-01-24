@@ -119,6 +119,19 @@ body {
     justify-content: center;
     text-decoration: none;
     }
+ .button.back {
+            background-color: transparent;
+            border: 2px solid #1DB954; /* Spotify Grün */
+            border-radius: 12px; /* Abgerundete Ecken */
+            color: #A0A0A0; /* Graue Schriftfarbe für "SPOTIFY PLAYER" */
+            font-size: 18px;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
             
         iframe {
             width: 100%;
