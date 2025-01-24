@@ -25,3 +25,6 @@ function downloadLogo() {
 function downloadbewerbung() {
   window.location.href="Bewerbung-Content_creator.zip"
 }
+function downloadmemes() {
+  window.location.href="memes.zip"
+}
