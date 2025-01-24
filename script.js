@@ -4,7 +4,7 @@ function opengame() {
 function opentime() {
   window.location.href ="time3.html"
 }
-function Backtomenu() {
+function backtomenu() {
   window.location.href ="game-library.html"
 }
 function openlibrary() {
