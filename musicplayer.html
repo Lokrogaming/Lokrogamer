@@ -69,62 +69,18 @@
 <strong><em>BACK TO MENU</em></strong> 
 </button>
 
-    <div class="container">
-        <h2>Halloween Playlist</h2>
-        <iframe src="https://open.spotify.com/embed/playlist/2bWtVAl9VX45x9gAUPiVOF?utm_source=generator&theme=0" 
-                frameborder="0" 
-                allowtransparency="true" 
-                allow="encrypted-media"></iframe>
+   <!-- Add a placeholder for the Twitch embed -->
+<div id="twitch-embed"></div>
 
-        <h2>Sankt Martin Playlist</h2>
-        <iframe src="https://open.spotify.com/embed/playlist/6rGoxwsUggA4pEHaWyBtkr?si=V1Un4BeERrG6kMHpZGLZ_Q" 
-                frameborder="0" 
-                allowtransparency="true" 
-                allow="encrypted-media"></iframe>
+<!-- Load the Twitch embed script -->
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
 
-        <h2>Nikolaus Playlist</h2>
-        <iframe src="https://open.spotify.com/embed/playlist/1MUhYw651Y9KAmLOIzlPIM?si=MFuPLmtSRT-HgX0pMrJ05w" 
-                frameborder="0" 
-                allowtransparency="true" 
-                allow="encrypted-media"></iframe>
-
-        <h3>Zusätzliche Songs</h3>
-        <div class="episodes">
-            <button class="episode" data-spotify-id="spotify:track:4PTG3Z6ehGkBFwjybzWkR8">
-                Song 1: Der 4. Song
-            </button>
-            <button class="episode" data-spotify-id="spotify:track:6Z36wt7oo6xm2uGN00PnTq">
-            Halloween Theme
-            </button>
-        </div>
-
-        <div id="embed-iframe"></div>
-    </div>
-
-    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
-    <script type="text/javascript">
-        window.onSpotifyIframeApiReady = (IFrameAPI) => {
-            const element = document.getElementById('embed-iframe');
-            const options = {
-                width: '100%',
-                height: '160',
-                uri: 'spotify:track:4PTG3Z6ehGkBFwjybzWkR8'
-            };
-            const callback = (EmbedController) => {
-                document.querySelectorAll('.episode').forEach(
-                    episode => {
-                        episode.addEventListener('click', () => {
-                            EmbedController.loadUri(episode.dataset.spotifyId);
-                        });
-                    });
-            };
-            IFrameAPI.createController(element, options, callback);
-        };
-        
-        function backtomenu() {
-        window.location.href="zwischenstation.html"
-        }
-    </script>
+<!-- Create a Twitch.Player object. This will render within the placeholder div -->
+<script type="text/javascript">
+  new Twitch.Player("twitch-embed", {
+    channel: "bastighg"
+  });
+</script
 
 </body>
 </html>
