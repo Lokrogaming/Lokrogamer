@@ -28,3 +28,6 @@ function downloadbewerbung() {
 function downloadmemes() {
   window.location.href="memes.zip"
 }
+function opentwitchplayer() {
+  window.location.href="musicplayer.html"
+}
