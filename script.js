@@ -31,3 +31,6 @@ function downloadmemes() {
 function opentwitchplayer() {
   window.location.href="musicplayer.html"
 }
+function downloadmsgs() {
+  window.location.href="msg-coded.zip"
+}
