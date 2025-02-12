@@ -34,3 +34,5 @@ function opentwitchplayer() {
 function downloadmsgs() {
   window.location.href="msg-coded.zip"
 }
+function opendiscord() {
+  window.open("discord.py", '_blank')
