@@ -1,3 +1,15 @@
+function loadedpage() {
+  let dcbtnpressed : false ;
+  let checkdcbtnpress : JSON.Stringify(dcbtnpressed);
+  localstorage.setItem(checkloaded);
+}
+  
+
+
+
+
+
+
 // Set the date we're counting down to
 var countDownDate = new Date("Feb 28, 2025 00:00:00").getTime();
 
@@ -28,5 +40,18 @@ var x = setInterval(function() {
 }, 1000);
 
 function joindc() {
-
-  localstorage.getItem(log)
+  
+let btnpress = localstorage.getItem(checkdcbtnpress);
+  let btn = JSON.Parse(btnpress);
+  if btn = false {
+    var dcbtnpressed = true;
+    var checkdcbtnpress = JSON.Stringify(dcbtnpressed);
+    localstorage.setItem(checkdcbtnpress);
+    window.replace="https://dcserver.link/lokrogamer";
+  }
+  else {
+    window.alert("You can't click the button twice!");
+  }
+    
+    
+  
