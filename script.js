@@ -36,3 +36,7 @@ function downloadmsgs() {
 }
 function opendiscord() {
   window.open("Discord.html")
+}
+function opentest() {
+  window.location.href="test-coupon-page.html"
+}
