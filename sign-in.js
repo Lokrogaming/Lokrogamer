@@ -3,9 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const captchaInput = document.getElementById('captchaInput');
     const loginForm = document.getElementById('loginForm');
     const message = document.getElementById('message');
-
-    const username = "Admin";
-    const password = "test123";
+    const pw2 = "liugsiuh829;:…)(´/";
+    const u896_475 = "Admin";
+    const p567_132 = "test123";
+    const username = await window.cryptingDecoder.decrypt(pw2, u896_475);
+    const password = await window.cryptingDecoder.decrypt(pw2, p567_132);
 
     // Generate a random captcha
     function generateCaptcha() {
