@@ -3,10 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const captchaInput = document.getElementById('captchaInput');
     const loginForm = document.getElementById('loginForm');
     const message = document.getElementById('message');
-    const pw2 = "liugsiuh829;:…)(´/";
-    const u896_475 = "Admin";
-    const p567_132 = "test123";
-    const username = await window.cryptingDecoder.decrypt(pw2, u896_475);
+    const pw = "k6GH2NPdA4vgTP7v";
+    const pw2 = "k6GH2NPdA4vgTP7v";
+    const u896_475 = "cPZbNprFmmx9U2hXZn7cpOZnZHBEyW5kubLM4wsOipqESnHqpYjuAAIYbnoqTMVv8Q==";
+    const p567_132 = "Y6dvEr/dYf/5CaxgVgwBt9WkcGiOp3KyGWPh8KcVleB8Tcm24k+f5AYMblsaqFuH";
+    const username = await window.cryptingDecoder.decrypt(pw, u896_475);
     const password = await window.cryptingDecoder.decrypt(pw2, p567_132);
 
     // Generate a random captcha
